@@ -8,13 +8,12 @@ const signin = require('./Controllers/Signin')
 const profile = require('./Controllers/rank')
 const image = require('./Controllers/image')
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
   client: 'pg',
   connection: {
   	//local host number: host : 127.0.0.1
-    connectionString: 'process.env.DATABASE_URL', 
+    connectionString: process.env.DATABASE_URL, 
     ssl: true,
     // user : 'postgres',
     // password : 'Chemiztry95',
