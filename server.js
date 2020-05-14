@@ -12,7 +12,7 @@ const db = knex({
   client: 'pg',
   connection: {
   	//local host number: host : 127.0.0.1
-    host: 'process.env.DATABASE_URL', 
+    connectionString: 'process.env.DATABASE_URL', 
     ssl: true,
     // user : 'postgres',
     // password : 'Chemiztry95',
