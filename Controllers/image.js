@@ -9,6 +9,7 @@ const handleApiCall = (req, res) => {
     .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
     .then(data => {
     	res.json(data);
+    	console.log('data from api recieved')
     })
     .catch(err => res.status(400).json(err))
 }
